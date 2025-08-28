@@ -1,18 +1,45 @@
 // customize sidebar navigator menu 
 
+// hide faq and about (from anon) //
+
+.nav-pills .nav-item-faq {display: none}
+.anon .nav-pills .nav-item-about {display: none}
+
+// change order of lower menu sections //
+
+.sidebar-section-wrapper.sidebar-section[data-section-name="categories"] {
+  order: 1; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="tags"] {
+  order: 2; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="chat-dms"] {
+  order: 4; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="chat-channels"] {
+  order: 5; 
+}
+.sidebar-section-wrapper.sidebar-section[data-section-name="messages"] {
+  order: 3; 
+}
 
 // * side-bar header formatting *
 
 .sidebar-section-wrapper .sidebar-section-header {
-    font-size: 14;
+    font-size: 15;
     //color: #555555;
     font-weight: 600;
     // align-items: left;
 }
 
-//.anon .sidebar-section-wrapper.sidebar-section[data-section-name="cfl-forums"] {
-//   display: none;
+//.anon .btn-flat.sidebar-more-section-links-details-summary,
+//.anon .sidebar-more-section-links-details-summary.json-editor-btn-collapse {
+//    display: none;
 //}
+
+.anon .sidebar-section-wrapper.sidebar-section[data-section-name="cfl-forums"] {
+   display: none;
+}
 
 // * turn off the lock icon for all secure categories in the sidebar *
 
